@@ -1,1 +1,352 @@
 # Malla-curricular-lic-en-ciencias-udea
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Licenciatura en Ciencias Sociales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    .semestre {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+      cursor: pointer;
+      margin-top: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      display: none;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular Interactiva<br>Licenciatura en Ciencias Sociales</h1>  <!-- Semestres I a X -->  <script>
+    const malla = [
+      {
+        semestre: "📘 Semestre I",
+        id: "sem1",
+        asignaturas: [
+          ["2091101", "Práctica Pedagógica I", 3, "Didáctica y práctica"],
+          ["2059004", "Historia, imágenes y concepciones de maestro", 3, "Pedagógico"],
+          ["2059007", "Didácticas, saberes y evaluación", 3, "Pedagógico"],
+          ["2091103", "Epistemología de las Ciencias Sociales", 3, "Disciplinar"],
+          ["2091105", "Matemáticas y Ciencias Sociales", 3, "Disciplinar"],
+          ["9020101", "English 1", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📗 Semestre II",
+        id: "sem2",
+        asignaturas: [
+          ["2091201", "Práctica Pedagógica II", 3, "Didáctica y práctica"],
+          ["2059003", "Tradiciones y paradigmas en pedagogía", 3, "Pedagógico"],
+          ["2091202", "Teoría y métodos de la sociología", 2, "Disciplinar"],
+          ["2091203", "Teoría y métodos de la Geografía", 3, "Disciplinar"],
+          ["2091204", "Teoría y métodos de la Historia", 3, "Disciplinar"],
+          ["2091205", "Taller: Pensamiento espacial", 2, "Disciplinar"],
+          ["9020102", "English 2", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📙 Semestre III",
+        id: "sem3",
+        asignaturas: [
+          ["2091301", "Práctica Pedagógica III", 3, "Didáctica y práctica"],
+          ["2059027", "Evaluación de los aprendizajes", 3, "Pedagógico"],
+          ["2059008", "Cognición, cultura y aprendizaje", 3, "Pedagógico"],
+          ["2091303", "Teoría y métodos de la Antropología", 2, "Disciplinar"],
+          ["2091305", "Medio geográfico I", 3, "Disciplinar"],
+          ["2091307", "Taller: Tiempo y sociedad", 2, "Disciplinar"],
+          ["9020103", "English 3", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📕 Semestre IV",
+        id: "sem4",
+        asignaturas: [
+          ["2091401", "Práctica Pedagógica IV", 4, "Didáctica y práctica"],
+          ["2059005", "Teorías curriculares y contextos educativos", 3, "Pedagógico"],
+          ["2059002", "Sujetos en las relaciones pedagógicas", 3, "Pedagógico"],
+          ["2091403", "Teoría y métodos de la Ciencia Política", 2, "Disciplinar"],
+          ["2091405", "Medio geográfico II", 3, "Disciplinar"],
+          ["2091407", "Europa y la invención del mundo moderno", 3, "Disciplinar"]
+        ]
+      },
+      {
+        semestre: "📒 Semestre V",
+        id: "sem5",
+        asignaturas: [
+          ["2091501", "Práctica Pedagógica V", 5, "Didáctica y práctica"],
+          ["2059006", "Políticas Públicas y Legislación Educativa", 3, "Pedagógico"],
+          ["2091505", "Colombia: territorios y territorialidades", 3, "Disciplinar"],
+          ["2091507", "América: sociedades ancestrales y coloniales", 3, "Disciplinar"],
+          ["2091508", "Colombia: sociedades ancestrales y coloniales", 3, "Disciplinar"]
+        ]
+      },
+      {
+        semestre: "📓 Semestre VI",
+        id: "sem6",
+        asignaturas: [
+          ["2091601", "Práctica Pedagógica VI", 5, "Didáctica y práctica"],
+          ["2059001", "Educación Popular", 3, "Pedagógico"],
+          ["2091605", "Paisaje americano y europeo", 3, "Disciplinar"],
+          ["2091606", "Seminario Poblaciones y lugares", 2, "Disciplinar"],
+          ["2091607", "Europa en el mundo contemporáneo", 3, "Disciplinar"],
+          ["9020104", "English 4", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📔 Semestre VII",
+        id: "sem7",
+        asignaturas: [
+          ["2091701", "Práctica Pedagógica VII", 5, "Didáctica y práctica"],
+          ["2059015", "Educación e inclusión", 3, "Pedagógico"],
+          ["2091707", "Sociedades de Colombia Moderna y Contemporánea", 3, "Disciplinar"],
+          ["2091708", "Sociedades de América Moderna y Contemporánea", 3, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["9020105", "English 5", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📚 Semestre VIII",
+        id: "sem8",
+        asignaturas: [
+          ["2091801", "Práctica Pedagógica VIII", 8, "Didáctica y práctica"],
+          ["2091805", "Seminario: Geopolíticas", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva II: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Sociedades Contextos Tiempo", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Campo de saber pedagógico", 3, "Pedagógico"]
+        ]
+      },
+      {
+        semestre: "📙 Semestre IX",
+        id: "sem9",
+        asignaturas: [
+          ["2091901", "Práctica Pedagógica IX", 8, "Didáctica y práctica"],
+          ["ELECTIVA", "Electiva II: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva III: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva II: Sociedades Contextos Tiempo", 2, "Disciplinar"],
+          ["2059014", "Formación ciudadana y constitución", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📗 Semestre X",
+        id: "sem10",
+        asignaturas: [
+          ["2091911", "Práctica Pedagógica X: Trabajo de grado", 6, "Didáctica y práctica"],
+          ["2091912", "Seminario Interdisciplinario problemáticas sociales", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva III: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva IV: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva III: Sociedades Contextos Tiempo", 2, "Disciplinar"]
+        ]
+      }
+    ];
+
+    document.write(malla.map(s => `
+      <div class="semestre">
+        <h2 onclick="toggle('${s.id}')">${s.semestre}</h2>
+        <table id="${s.id}">
+          <tr><th>Código</th><th>Asignatura</th><th>Créditos</th><th>Componente</th></tr>
+          ${s.asignaturas.map(a => `<tr><td>${a[0]}</td><td>${a[1]}</td><td>${a[2]}</td><td>${a[3]}</td></tr>`).join('')}
+        </table>
+      </div>
+    `).join(''));
+
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'table' ? 'none' : 'table';
+    }
+  </script></body>
+</html><!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Licenciatura en Ciencias Sociales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    .semestre {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+      cursor: pointer;
+      margin-top: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      display: none;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular Interactiva<br>Licenciatura en Ciencias Sociales</h1>  <!-- Semestres I a X -->  <script>
+    const malla = [
+      {
+        semestre: "📘 Semestre I",
+        id: "sem1",
+        asignaturas: [
+          ["2091101", "Práctica Pedagógica I", 3, "Didáctica y práctica"],
+          ["2059004", "Historia, imágenes y concepciones de maestro", 3, "Pedagógico"],
+          ["2059007", "Didácticas, saberes y evaluación", 3, "Pedagógico"],
+          ["2091103", "Epistemología de las Ciencias Sociales", 3, "Disciplinar"],
+          ["2091105", "Matemáticas y Ciencias Sociales", 3, "Disciplinar"],
+          ["9020101", "English 1", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📗 Semestre II",
+        id: "sem2",
+        asignaturas: [
+          ["2091201", "Práctica Pedagógica II", 3, "Didáctica y práctica"],
+          ["2059003", "Tradiciones y paradigmas en pedagogía", 3, "Pedagógico"],
+          ["2091202", "Teoría y métodos de la sociología", 2, "Disciplinar"],
+          ["2091203", "Teoría y métodos de la Geografía", 3, "Disciplinar"],
+          ["2091204", "Teoría y métodos de la Historia", 3, "Disciplinar"],
+          ["2091205", "Taller: Pensamiento espacial", 2, "Disciplinar"],
+          ["9020102", "English 2", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📙 Semestre III",
+        id: "sem3",
+        asignaturas: [
+          ["2091301", "Práctica Pedagógica III", 3, "Didáctica y práctica"],
+          ["2059027", "Evaluación de los aprendizajes", 3, "Pedagógico"],
+          ["2059008", "Cognición, cultura y aprendizaje", 3, "Pedagógico"],
+          ["2091303", "Teoría y métodos de la Antropología", 2, "Disciplinar"],
+          ["2091305", "Medio geográfico I", 3, "Disciplinar"],
+          ["2091307", "Taller: Tiempo y sociedad", 2, "Disciplinar"],
+          ["9020103", "English 3", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📕 Semestre IV",
+        id: "sem4",
+        asignaturas: [
+          ["2091401", "Práctica Pedagógica IV", 4, "Didáctica y práctica"],
+          ["2059005", "Teorías curriculares y contextos educativos", 3, "Pedagógico"],
+          ["2059002", "Sujetos en las relaciones pedagógicas", 3, "Pedagógico"],
+          ["2091403", "Teoría y métodos de la Ciencia Política", 2, "Disciplinar"],
+          ["2091405", "Medio geográfico II", 3, "Disciplinar"],
+          ["2091407", "Europa y la invención del mundo moderno", 3, "Disciplinar"]
+        ]
+      },
+      {
+        semestre: "📒 Semestre V",
+        id: "sem5",
+        asignaturas: [
+          ["2091501", "Práctica Pedagógica V", 5, "Didáctica y práctica"],
+          ["2059006", "Políticas Públicas y Legislación Educativa", 3, "Pedagógico"],
+          ["2091505", "Colombia: territorios y territorialidades", 3, "Disciplinar"],
+          ["2091507", "América: sociedades ancestrales y coloniales", 3, "Disciplinar"],
+          ["2091508", "Colombia: sociedades ancestrales y coloniales", 3, "Disciplinar"]
+        ]
+      },
+      {
+        semestre: "📓 Semestre VI",
+        id: "sem6",
+        asignaturas: [
+          ["2091601", "Práctica Pedagógica VI", 5, "Didáctica y práctica"],
+          ["2059001", "Educación Popular", 3, "Pedagógico"],
+          ["2091605", "Paisaje americano y europeo", 3, "Disciplinar"],
+          ["2091606", "Seminario Poblaciones y lugares", 2, "Disciplinar"],
+          ["2091607", "Europa en el mundo contemporáneo", 3, "Disciplinar"],
+          ["9020104", "English 4", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📔 Semestre VII",
+        id: "sem7",
+        asignaturas: [
+          ["2091701", "Práctica Pedagógica VII", 5, "Didáctica y práctica"],
+          ["2059015", "Educación e inclusión", 3, "Pedagógico"],
+          ["2091707", "Sociedades de Colombia Moderna y Contemporánea", 3, "Disciplinar"],
+          ["2091708", "Sociedades de América Moderna y Contemporánea", 3, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["9020105", "English 5", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📚 Semestre VIII",
+        id: "sem8",
+        asignaturas: [
+          ["2091801", "Práctica Pedagógica VIII", 8, "Didáctica y práctica"],
+          ["2091805", "Seminario: Geopolíticas", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva II: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Sociedades Contextos Tiempo", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva I: Campo de saber pedagógico", 3, "Pedagógico"]
+        ]
+      },
+      {
+        semestre: "📙 Semestre IX",
+        id: "sem9",
+        asignaturas: [
+          ["2091901", "Práctica Pedagógica IX", 8, "Didáctica y práctica"],
+          ["ELECTIVA", "Electiva II: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva III: Espacio Ambiente Sociedad", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva II: Sociedades Contextos Tiempo", 2, "Disciplinar"],
+          ["2059014", "Formación ciudadana y constitución", 2, "Complementario"]
+        ]
+      },
+      {
+        semestre: "📗 Semestre X",
+        id: "sem10",
+        asignaturas: [
+          ["2091911", "Práctica Pedagógica X: Trabajo de grado", 6, "Didáctica y práctica"],
+          ["2091912", "Seminario Interdisciplinario problemáticas sociales", 2, "Disciplinar"],
+          ["ELECTIVA", "Electiva III: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva IV: Campo de saber pedagógico", 3, "Pedagógico"],
+          ["ELECTIVA", "Electiva III: Sociedades Contextos Tiempo", 2, "Disciplinar"]
+        ]
+      }
+    ];
+
+    document.write(malla.map(s => `
+      <div class="semestre">
+        <h2 onclick="toggle('${s.id}')">${s.semestre}</h2>
+        <table id="${s.id}">
+          <tr><th>Código</th><th>Asignatura</th><th>Créditos</th><th>Componente</th></tr>
+          ${s.asignaturas.map(a => `<tr><td>${a[0]}</td><td>${a[1]}</td><td>${a[2]}</td><td>${a[3]}</td></tr>`).join('')}
+        </table>
+      </div>
+    `).join(''));
+
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'table' ? 'none' : 'table';
+    }
+  </script></body>
+</html>
