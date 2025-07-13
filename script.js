@@ -1,4 +1,4 @@
-const ramos = [
+const ramos = [ 
   { id: 'ingles1', nombre: 'Inglés 1', semestre: 1 },
   { id: 'ingles2', nombre: 'Inglés 2', semestre: 2, requisitos: ['ingles1'] },
   { id: 'ingles3', nombre: 'Inglés 3', semestre: 3, requisitos: ['ingles2'] },
