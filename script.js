@@ -5,9 +5,9 @@ const ramos = [
   { id: 'matematicas', nombre: 'Matemáticas y Ciencias sociales', semestre: 1, creditos: 3 },
   { id: 'ingles1', nombre: 'Inglés 1', semestre: 1, creditos: 2 },
   { id: 'practica1', nombre: 'Práctica Pedagógica I', semestre: 1, creditos: 3 },
-  { id: 'paradigmas', nombre: 'Tradiciones y paradigmas en pedagogía', semestre: 2, creditos: 3 },
-  { id: 'practica2', nombre: 'Práctica Pedagógica II', semestre: 2, creditos: 3, requisitos: ['practica1'] }
-  // Puedes seguir agregando el resto aquí...
+
+  { id: 'practica2', nombre: 'Práctica Pedagógica II', semestre: 2, creditos: 3, requisitos: ['practica1'] },
+  { id: 'ingles2', nombre: 'Inglés 2', semestre: 2, creditos: 2, requisitos: ['ingles1'] }
 ];
 
 function crearMalla() {
