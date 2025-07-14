@@ -1,47 +1,51 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4fff4;
+  background-color: #fff5f8; /* Fondo rosado pastel */
   color: #333;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-  color: #2d5f2d;
+  color: #a03363; /* Título rosado oscuro */
 }
 
 .semestre {
-  border: 2px solid #b3e6b3;
+  border: 2px solid #f9b4c6;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #e6ffe6;
+  background-color: #ffe6ed; /* Fondo de cada semestre */
   border-radius: 10px;
+}
+
+.semestre h2 {
+  color: #cc3366;
 }
 
 .ramo {
   padding: 10px;
   margin: 5px;
   border-radius: 8px;
-  background-color: #c8f7c5;
-  border: 1px solid #98d898;
+  background-color: #fbd0db;
+  border: 1px solid #f2a5b6;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .ramo:hover {
   transform: scale(1.02);
-  background-color: #b2f0af;
+  background-color: #f8a9bf;
 }
 
 .ramo.aprobado {
-  background-color: #8fe88a;
-  border: 2px solid #52b24d;
+  background-color: #f26d98;
+  border: 2px solid #c93a6b;
   color: white;
   font-weight: bold;
 }
 
 .ramo.bloqueado {
-  background-color: #e0e0e0;
+  background-color: #f2f2f2;
   border: 1px dashed #aaa;
   cursor: not-allowed;
   opacity: 0.6;
