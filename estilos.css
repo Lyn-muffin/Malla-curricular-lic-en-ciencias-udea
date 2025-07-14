@@ -7,7 +7,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #ad1457; /* Rosado oscuro */
+  color: #ad1457; /* Rosado fuerte */
 }
 
 #malla {
@@ -20,14 +20,14 @@ h1 {
 .semestre {
   border: 2px solid #f8bbd0; /* Borde rosado claro */
   padding: 10px;
-  background-color: #f1f8e9; /* Verde muy claro */
+  background-color: #dcedc8; /* Verde pastel más claro */
   border-radius: 10px;
-  box-shadow: 0 0 6px rgba(244, 143, 177, 0.2); /* sombra rosada suave */
+  box-shadow: 0 0 6px rgba(244, 143, 177, 0.3); /* sombra rosada */
 }
 
 .semestre h2 {
   text-align: center;
-  color: #7b1fa2; /* Morado rosado */
+  color: #558b2f; /* Verde oscuro */
   font-size: 1.1em;
 }
 
@@ -35,7 +35,7 @@ h1 {
   padding: 10px;
   margin: 5px 0;
   border-radius: 8px;
-  background-color: #a5d6a7; /* Verde pastel para ramos habilitados */
+  background-color: #c5e1a5; /* Verde claro para ramos habilitados */
   border: 1px solid #f48fb1; /* Borde rosado pastel */
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -44,11 +44,11 @@ h1 {
 
 .ramo:hover {
   transform: scale(1.02);
-  background-color: #f8bbd0; /* rosado claro al pasar el cursor */
+  background-color: #f8bbd0; /* rosado suave al pasar el cursor */
 }
 
 .ramo.aprobado {
-  background-color: #ec407a; /* rosado fuerte para aprobado */
+  background-color: #ec407a; /* rosado intenso */
   border: 2px solid #ad1457;
   color: white;
   font-weight: bold;
